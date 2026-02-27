@@ -8,7 +8,7 @@ Git	2.x или выше, проверка:	git --version
 
 ## 1. Клонирование репозитория
 git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git    
-cd attendance-app
+cd schedule_kemsu_frontend
 
 ## 2. Установка зависимостей
 Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)  
