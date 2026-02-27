@@ -108,12 +108,6 @@ const LoginPage: React.FC = () => {
             )}
           </button>
         </form>
-
-        <div className="mt-6 p-3 bg-gray-50 rounded-lg">
-          <p className="text-xs text-gray-500 mb-2">Тестовые данные:</p>
-          <p className="text-xs text-gray-600">Логин: petrov@kemsu.ru</p>
-          <p className="text-xs text-gray-600">Пароль: password123</p>
-        </div>
       </div>
     </div>
   );
