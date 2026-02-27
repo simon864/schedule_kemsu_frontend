@@ -2,9 +2,9 @@
 Перед началом убедитесь, что у вас установлены следующие инструменты:
 
 
-Node.js	18.x или выше, проверка: node --version  
-npm	9.x или выше, проверка:	npm --version  
-Git	2.x или выше, проверка:	git --version  
+Node.js	18.x или выше, проверка: ```node --version```  
+npm	9.x или выше, проверка:	```npm --version```  
+Git	2.x или выше, проверка:	```git --version```  
 
 ## 1. Клонирование репозитория
 ```git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git```  
