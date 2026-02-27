@@ -7,12 +7,12 @@ npm	9.x или выше, проверка:	npm --version
 Git	2.x или выше, проверка:	git --version  
 
 ## 1. Клонирование репозитория
-git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git    
-cd schedule_kemsu_frontend
+```git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git```
+```cd schedule_kemsu_frontend```
 
 ## 2. Установка зависимостей
 Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)  
-npm install --legacy-peer-deps
+```npm install --legacy-peer-deps```
 
 ## 3. Запуск в режиме разработки
 npm run dev
