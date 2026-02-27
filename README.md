@@ -5,6 +5,7 @@
 Node.js	18.x или выше	node --version
 npm	9.x или выше	npm --version
 Git	2.x или выше	git --version
+| Инструмент | Версия | Проверка | |----------|-------|--------| | Node.js | 18.x или выше | node --version | | npm | 9.x или выше | 15 | | Headset | npm --version |  
 
 ## 1. Клонирование репозитория
 bash
