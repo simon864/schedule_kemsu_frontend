@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+## Требования
+Перед началом убедитесь, что у вас установлены следующие инструменты:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Node.js	18.x или выше, проверка: node --version  
+npm	9.x или выше, проверка:	npm --version  
+Git	2.x или выше, проверка:	git --version  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Клонирование репозитория
+git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git    
+cd schedule_kemsu_frontend
 
-## React Compiler
+## 2. Установка зависимостей
+Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)  
+npm install --legacy-peer-deps
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3. Запуск в режиме разработки
+npm run dev
 
-## Expanding the ESLint configuration
+## 4. Зависимости
+react	19.2.4	Библиотека React  
+react-dom	19.2.4	DOM-связка для React  
+react-router-dom	6.22.0	Маршрутизация  
+axios	1.6.7	HTTP клиент  
+jwt-decode	4.0.0	Декодирование JWT токенов  
+lucide-react	0.344.0	Иконки  
+date-fns	3.3.1	Работа с датами  
+date-fns-tz	3.2.0	Работа с часовыми поясами
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 5. Development dependencies
+vite	5.0.0	Сборщик проекта  
+typescript	5.2.0	TypeScript  
+@types/react	19.2.4	Типы для React  
+@types/react-dom	19.2.4	Типы для React DOM  
+@types/node	20.11.0	Типы для Node.js  
+tailwindcss	3.4.0	CSS фреймворк  
+postcss	8.4.0	Обработчик CSS  
+autoprefixer	10.4.0	Автопрефиксер CSS  
+eslint	8.56.0	Линтер  
+@typescript-eslint/eslint-plugin	6.21.0	ESLint для TypeScript  
+@typescript-eslint/parser	6.21.0	Парсер TypeScript для ESLint  
+@vitejs/plugin-react	4.2.0	Плагин React для Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 6. Доступные скрипты
+npm run dev	Запуск в режиме разработки  
+npm run build	Сборка для production  
+npm run preview	Предпросмотр production сборки  
+npm run lint	Проверка кода линтером
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 7. Сборка для production
+Создание production сборки  
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Результат будет в папке dist/
+Можно протестировать локально:  
+npm run preview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 8. Устранение неполадок
+Ошибка ERESOLVE при установке зависимостей  
+Если при установке возникает ошибка, используйте флаг --legacy-peer-deps:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm install --legacy-peer-deps
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 9. Проблемы с токеном авторизации
+Проверьте наличие токена в localStorage:
+
+localStorage.getItem('token')  
+Проверьте правильность URL API в .env
+
+Посмотрите логи в консоли браузера (F12)
+
