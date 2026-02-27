@@ -13,7 +13,7 @@ cd attendance-app
 
 ##2. Установка зависимостей
 bash
-# Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)
+Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)
 npm install --legacy-peer-deps
 
 ##3. Запуск в режиме разработки
