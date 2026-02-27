@@ -7,7 +7,7 @@ npm	9.x или выше, проверка:	npm --version
 Git	2.x или выше, проверка:	git --version  
 
 ## 1. Клонирование репозитория
-git clone <url-репозитория>  
+git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git    
 cd attendance-app
 
 ## 2. Установка зависимостей
