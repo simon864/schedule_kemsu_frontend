@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=${VITE_API_URL:-http://localhost:3000/api}
+    container_name: attendance-frontend
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+    networks:
+      - attendance-network
+
+networks:
+  attendance-network:
+    driver: bridge
