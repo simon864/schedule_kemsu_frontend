@@ -2,20 +2,20 @@
 Перед началом убедитесь, что у вас установлены следующие инструменты:
 
 
-Node.js	18.x или выше, проверка: node --version  
-npm	9.x или выше, проверка:	npm --version  
-Git	2.x или выше, проверка:	git --version  
+Node.js	18.x или выше, проверка: ```node --version```  
+npm	9.x или выше, проверка:	```npm --version```  
+Git	2.x или выше, проверка:	```git --version```  
 
 ## 1. Клонирование репозитория
-git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git    
-cd schedule_kemsu_frontend
+```git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git```  
+```cd schedule_kemsu_frontend```
 
 ## 2. Установка зависимостей
 Установка всех зависимостей с флагом legacy-peer-deps (из-за конфликта версий React)  
-npm install --legacy-peer-deps
+```npm install --legacy-peer-deps```
 
 ## 3. Запуск в режиме разработки
-npm run dev
+```npm run dev```
 
 ## 4. Зависимости
 react	19.2.4	Библиотека React  
@@ -42,29 +42,29 @@ eslint	8.56.0	Линтер
 @vitejs/plugin-react	4.2.0	Плагин React для Vite
 
 ## 6. Доступные скрипты
-npm run dev	Запуск в режиме разработки  
-npm run build	Сборка для production  
-npm run preview	Предпросмотр production сборки  
-npm run lint	Проверка кода линтером
+```npm run dev```	Запуск в режиме разработки  
+```npm run build```	Сборка для production  
+```npm run preview```	Предпросмотр production сборки  
+```npm run lint```	Проверка кода линтером
 
 ## 7. Сборка для production
 Создание production сборки  
-npm run build
+```npm run build```
 
 Результат будет в папке dist/
 Можно протестировать локально:  
-npm run preview
+```npm run preview```
 
 ## 8. Устранение неполадок
 Ошибка ERESOLVE при установке зависимостей  
 Если при установке возникает ошибка, используйте флаг --legacy-peer-deps:
 
-npm install --legacy-peer-deps
+```npm install --legacy-peer-deps```
 
 ## 9. Проблемы с токеном авторизации
 Проверьте наличие токена в localStorage:
 
-localStorage.getItem('token')  
+```localStorage.getItem('token')  ```
 Проверьте правильность URL API в .env
 
 Посмотрите логи в консоли браузера (F12)
