@@ -70,7 +70,11 @@ eslint	8.56.0	Линтер
 Посмотрите логи в консоли браузера (F12)
 
 ## 10. Запуск Docker
+Требования:  
+- Docker Desktop  
+- Docker Compose  
 ```git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git```  
 ```cd schedule_kemsu_frontend```  
-```docker-compose up -d```
+```docker-compose up -d```  
+Frontend будет доступен по порту http://localhost:8081
 
