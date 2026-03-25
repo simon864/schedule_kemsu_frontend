@@ -69,3 +69,8 @@ eslint	8.56.0	Линтер
 
 Посмотрите логи в консоли браузера (F12)
 
+## 10. Запуск Docker
+```git clone -b master https://github.com/simon864/schedule_kemsu_frontend.git```  
+```cd schedule_kemsu_frontend```  
+```docker-compose up -d```
+
